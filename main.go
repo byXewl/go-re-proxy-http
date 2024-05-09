@@ -20,7 +20,7 @@ func (Proxy) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func main() {
 	addr := "127.0.0.1:8081"
 
-	fmt.Printf("反向代理正在监听：%s\n", addr)
+	fmt.Printf("反向代理正在监听本地端口：%s\n", addr)
 	err := http.ListenAndServe(addr, Proxy{})
 	if err != nil {
 		fmt.Println(err)
